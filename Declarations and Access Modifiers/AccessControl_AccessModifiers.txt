@@ -196,7 +196,77 @@ case 8:
 			default package( current working directory) not
 
 case 9:
-	import statement is totally comadline issue if no import increase the complexity will be increased automatically but there is no 
-	effect on execution time. need to fix the verbage!
+	importing is totally compile time related concept if more no of imports then time required for compilation is more but there is
+	no effect of execution time(runtime)
 	
+	* try to understand the above statemtn based on compiler prespective
+	
+
+
+Static Imports:
+
+	1. It was introducedin version 1.5 
+	
+	2. According to sun static import improves readability of the code, But according to world wide programming static imports reduces 
+	the readability of the code crates confusion! It is not recommended to use static import if there is no specific requirement.
+
+	3. Usually we can access static members by using class names, but when ever we are using static import, it is not requried to use 
+	   class name and we can access static member directly.
+
+
+		with out static : 
+				class Test {
+					public static void main(String []args) { 
+						System.out.println(Math.sqrt(4) + " \n" + Math.random()+ " \n" + Math.max(10, 20));	
+					}
+				}
+
+		Using static import:
+
+			import static java.lang.math.sqrt;
+			import static java.lang.math.*;
+
+			class Test {
+				public static void main(String []args) { 
+					System.out.println(sqrt(4) + "\n " + random() + " \n" + max(10, 20));
+				}
+			}
+
+
+Explain about System.out.println():
+
+	class Test {
+	
+		private static String name = "raghu";
+				
+		public static void main(String [] args) {
+			System.out.println(Test.name.length);
+		}
+	}
+
+
+	class System {
+		static printStream out;
+		
+	}
+
+	System.out.println();
+
+
+	Out is a static variable present in the System class hence we can access by using classname.
+
+	But when ever wera using static import it is not requried to use the classnmae we can acceess out variable or static 
+	variable direclty.
+
+
+		import satic java.lang.System.out;
+
+
+		public class Test{
+			public static void main(String []args) {
+				out.println("Hello");
+				out.println("Hi"):
+			}
+		}
+
 
