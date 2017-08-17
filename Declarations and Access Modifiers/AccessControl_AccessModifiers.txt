@@ -128,6 +128,7 @@ case 4:
 	note: When ever we are using fully qualified name import statement are not required,
 	      If we use import statement then fully qualified class name is not required
 
+case 5:
 			ex: import java.util.*;
 
 				we can use Date class inside our class like 
@@ -144,7 +145,58 @@ case 4:
 			import java.util.Date;
 			import java.sql.Date;
 
+			Compiletime error: a type with the same simple name is already defined by the single-type-import of Date
+			imprort java.sql.Date;
 
 
-case 5:
+
+case 6:
+	Order of priority 
+		1. Explicit class import 
+		2. classes present in curent working directory 
+		3. implicit class import 
+
+
+	import java.util.Date;
+	import java.sql.*;
+
+	Class Test {
+		---> priority goes to Explict class
+	}
+
+	conclusion: While Resolving class names compiler wil always gives the precidence in the following order.
+		 
 	
+case 7:
+
+	When ever we are importing a package all classes and interfaces present in the package are availabe but not subpackage classes
+
+		ex java ->
+			  |-util-> 
+				 |-regex ->
+					  |-pattern
+					
+
+
+	-> To use patttern class which of the following import is required
+		
+		import java.*;
+		import java.util.*;
+		import java.util.regex.*; -> ture
+		import java.util.regex.pattern; -> true
+
+	if we want to use sub-package class its mandatory to include import statement until sub-package level.
+
+
+case 8:
+	The following 2 packages are not requried to import becase all classes and interaces present int these 2 packages are available 
+	by default to every java program 
+		
+			java.lang ----> package
+			default package( current working directory) not
+
+case 9:
+	import statement is totally comadline issue if no import increase the complexity will be increased automatically but there is no 
+	effect on execution time. need to fix the verbage!
+
+
