@@ -42,4 +42,109 @@ Java Source file Structure:
 	  
 
 
-		
+		below is the very very interesting example
+
+			class A { public static void main(String [] args) { System.out.println("A");} }
+			class B { public static void main(String [] args) { System.out.println("B");}} }
+			class C { public static void main(Stirng [] args) {  System.out.println("C");}} }
+			class D { }
+
+		for the above code is save to Raghu.java source file 
+		1. Execute of the Raghu.java file is successful  no compile time errors
+		2. A.class, B.class, C.class D.class will be generated
+		3. java A o/p : A
+		4. java B o/p : B
+		5. java C o/p : C
+		6. java D o/p : Runtime Exception: NoSuchMethodError: main
+		7. java Raghu o/p Runtime Exception: NoClassDefFoundError: Raghu
+
+
+
+
+Import Statements:
+
+	The main use of import it that you can pin point the class file location
+	We can resolve this problem by using fully qualified name 
+	
+		ex: package
+		package java.util.ArrayList;
+		package java.util.List;
+
+	The problem with the usage of import statement will increase the size of the code
+	we can resolve the multiple import statements of same package by usig import statement
+	
+		form the example package we can replace by below example
+
+			ex: import java.util.*;
+
+			java.util.ArrayList -> is fully qualified name, the problem is that we need to specify everytime if needed which 
+			leads increase of code length
+
+	
+			
+case 1: 
+	Types of import statements 
+
+		There are 2 types of import statements 
+			1. Explicit class import
+			2. Implicit class import 
+
+		Explicit ex: import java.util.ArrayList or import java.util.List 
+			      a. This type of import is highly recommended to use, because it improves readability of the code
+			      b. 	
+				
+		Implicit ex: import java.util.*; ( with .* we get all the sub classes below util)
+			     a. It is never recommended to use this type of import because it reduces readability of the code.
+			     b.
+
+case 2: 
+	In c language #include all the specified header files will be loaded at the tiem of include dstatemtn only irrespecitve of wheather we 
+	are using those headerfiles or not. Hence this is static bading
+
+	But in this case of java language import statemtn no called file will be loaded at the time of import statement, in the next lines of 
+	code when ever we are using aat that time only the corresponding .class file will be loaded this type of laoding is called dynamic loading 
+	or load on demand or load on fly or lazy loading.
+
+
+case 3: 
+	which of the following import statements are valid?
+
+		import java.util; (compile time error)
+
+		import java.util.ArrayList; ( fully qualified name no issues)
+ 
+		import java.util.ArrayList.*; ( it reached the fully qualified name and no need to add .* which is wrong)
+
+		import java.util.*;( pefect way of importing all the classes falling inside util package)
+
+case 4:
+	Consider the code 
+				class MyRemoteObject extends java.rmi.UnicasteRemoteObject {
+
+				}
+	
+	the above code compile fine eventhough we are not using import statement becase we used fullyqualified name
+
+	note: When ever we are using fully qualified name import statement are not required,
+	      If we use import statement then fully qualified class name is not required
+
+			ex: import java.util.*;
+
+				we can use Date class inside our class like 
+						
+						Date date  = new Date() 
+				we excluded fully qualified name of date class which will  be 
+					
+						java.util.Date date = new java.util.Date();
+	
+	But in some cases there will be ambiguity if we include java.slq.*;
+		since java.sql.Date will cause the program into ambiguity situation.
+
+
+			import java.util.Date;
+			import java.sql.Date;
+
+
+
+case 5:
+	
