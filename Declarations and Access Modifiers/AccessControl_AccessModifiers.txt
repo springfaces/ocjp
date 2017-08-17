@@ -1,0 +1,45 @@
+			
+				
+					Declarations and Access Modifiers
+
+
+
+
+	1. Java Source File Structure 
+	2. Class Modifiers
+	3. Member Modifiers
+	4. Interfaces
+
+
+
+
+Java Source file Structure:
+
+	A java program can contain any no of classes but atmost one class can be declared as public. If ther is apublic classs
+	the name of the progrma and name of public class must match otherwise we will get a compile time errro.
+
+	If there is no public class then we can use any name as Java source file name, there is no restriciton.
+
+		ex:  class A {} class B{} class C {}
+
+			Raghu.java or MyClass.java ect...
+
+
+	case 1: If there is no public class then we can use any name as java source file 
+		ex: A.java or B.java Or c.java or Ant.java....
+
+	case 2: If the class B is declared as public then if you save the source file with A.java in this case we will get compile
+		time error. 
+			ce: "Class B is public should be declard in a file name B.java" very very important 
+
+
+	case 3: If we declare Both A and B classes as public and name of the  program as B.java then we will get compile time error 
+		saying Class A is public shoulb b e declared in a file named A.java
+	
+
+	Note: It is highly recommended to take one class per java source file and name of the file and that class name must be matched 
+	      this approach improves code readability.
+	  
+
+
+		
