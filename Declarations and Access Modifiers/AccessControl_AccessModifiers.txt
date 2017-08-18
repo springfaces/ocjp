@@ -378,4 +378,138 @@ Normal import vs Static import
 
 
 		
+Packages:
+	It is an encapsulation mechanism to group related classes and interface into a single module. The main purpose of 
+	packages are 
 		
+			1. To resolve naming conflicts
+			2. To provide security to the classes and interfaces so that outside person can't access directly
+			3. Improves modularity of the application 
+	
+	Thera is on universally accepted convention to name packages i.e; to use internet domain name in reverse
+		
+			normally www.universityofminnesota.edu
+
+		for packaging structure we need to fllow,
+			
+			edu.universityofminnesota.www
+
+		ex: 
+
+			package edu.uofm.www;
+
+			public class UofM {
+
+			}
+	case 1: The generated class file will be place in current directory 
+			
+	case 2: generated class file will be palced into corresponding pakcage and the directoy structure  will be created
+		more info below example
+
+
+			edu_
+			    | uofm_
+				   |www
+				       |-UofM.java
+		
+		if the sepecified package is not available then at the time of execution the directory will be created corre-
+		ponding the package name.
+
+		As the destination we can use any vlaid directory 
+	
+		while running .class file if the specified package name corresponding directory is not availabe then the compiler
+		will throw an error.
+
+
+	Thumb rule In any java program there should be only at most 1 package statement in a java program, if we are taking more than
+	one package statement we will get compiletime error.
+
+		package edu.ufom.www;
+		package net.ladud.www;
+		 
+		 public class Organization {
+
+		 }
+
+		 o/p: compile tirme error class interface or enum expected 
+
+	In any java program the first non comment statement should be package if you specify a package statement in the java program 
+		
+		package edu.uofm.www;
+
+		import java.io.*;
+
+		public class MyClass{
+
+		}
+
+	Below is the standard and proper recommended structure of java program
+
+
+		package statement; ----------------- step 1
+
+
+		import java.io.*;
+		import java.util.*;-------------------step2
+
+
+		class Name { --------------------------step 3
+
+			
+			/*
+			 class memeber -----------------> not necessary
+			*/
+
+		}
+
+		Step 1: package statement should be the first line of the code excluding comments if provided. This is option based on 
+			the requirement
+
+		Step 2: import statment can start at the beginning if and only if the package statement is not specified. Totally optional
+			required based on the class code
+		
+		Step 3: Class not mandatory have to be with the class key word and identifier name and should be delcared with curly braces
+			{ and need to closed by curly brace}
+
+	* Any empty source file is a valid java program.
+
+
+
+Class Modifier:
+
+
+	A class should provide some information about itself to jvm,
+		Wheather our class can be accessible form any where or not
+		Wheather child class creation is possible or not form our class
+		Wheather instantiation is possible or not
+	
+	We can specify the inforamtion by declaring with appropriate modifier
+	
+	The only applicable modifer for top-level classes are 
+
+		public 
+		<defualt>
+		final 
+		abstract 
+		strictfp
+	 if we use anyother modifier other than mentioned above for top level class compiler will throw an error saying 
+		"modifers xxxxxxx not allowed here"
+	
+
+	But for the inner classes the following modifiers are allowed 
+
+		public
+		private 
+		protected
+		final 
+		abstract
+		strictfp
+		<default>
+		static
+	
+Access Specifiers vs Modifiers
+
+	In old langaugagte liek c and c++ public private protected and defualt are considered as accesspecifiers n all the 
+	reamaining are considered to final.
+
+
