@@ -510,6 +510,66 @@ Class Modifier:
 Access Specifiers vs Modifiers
 
 	In old langaugagte liek c and c++ public private protected and defualt are considered as accesspecifiers n all the 
-	reamaining are considered to final.
+	reamaining are considered to final, 
+	Static are considered as access modifiers
+	But in java there is no such type of divsion all are considered as access modifiers
 
 
+Public class:
+
+	If a class declared as public we can access that class from any where.
+		
+			ex: package com.test;
+				
+			    public class A {
+				public void m1() { System.out.println("");
+			    }
+
+			    package com.dev;
+
+			    public class B {
+					
+				public static void main(String []args ) { 
+					A a = new A();
+					a.m1()
+				}
+			    }
+
+
+	In the above code we need to observe how class B pakcage dev is able to access public class of package test, Hence its proved
+	that Public class is accessable form anywhere.
+
+
+Default classes:
+
+	If a class declared as default then we can access that class only with in that current package i.e; from outside fo the package
+	we can not access the classess
+
+Final modifier:
+	Final is the modifier applicalble for classes, methods and variables 
+	If the method declared as the final then we are not allowed to override that class or produce child clas
+
+	ex final class P {
+
+		}
+		class S extends P {
+
+		}
+
+	Above code throws a compile time error Class S cannot override Class P
+
+ *Every method present in the final class is always final by default but every variable inside the final class need not be final 
+ *The main advantage of the final class is that we can achieve security as no one is allowed to change out implementation
+ *But main disadvantage of final implementation is that we are misusing the advantages of OOPS concepts like inheritance, Polymorphism 
+  make sure to declare final before code implementation
+
+
+ Abstract modifier:
+	
+	Abstract is the modifier applicable for classes and methods but not for  variables
+
+ Abstract method:
+
+	Eventhough we dont know about them implementation still we cna declare  a mehtod with absract modifier absract method scan only 
+	be declaration but not implementaion the child class of abstract call the mehtod abstraction implementation need to implmented 
+	mandoatory need to rephrase this one
