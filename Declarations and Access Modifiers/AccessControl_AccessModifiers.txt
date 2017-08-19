@@ -569,7 +569,32 @@ Final modifier:
 	Abstract is the modifier applicable for classes and methods but not for  variables
 
  Abstract method:
-
-	Eventhough we dont know about them implementation still we cna declare  a mehtod with absract modifier absract method scan only 
-	be declaration but not implementaion the child class of abstract call the mehtod abstraction implementation need to implmented 
-	mandoatory need to rephrase this one
+	Eventhough we dont know bout implementing still we can declare a method i.e; abstract methods can have only declaration but no implmementation. Hence evey abstract method declaration should complarsay ends with ;
+	
+	public abstract void m2();
+	
+	child class are required to provide implementation of the parent class abstract methods
+	
+		abstract class vehicle {
+			public abstract int getNoOfWheels();
+		}
+		
+		public class Bus extends Vehicle {
+			public void int getNoOfWheels() {
+				return 8;
+			}
+		}
+		
+	after declaring abstract method in parent class we can define guidelines to the child classes which describe the method those are to be compulsary implemented by child class.
+	
+	abstract modifiers never talks about implementation if any modifier talks about implementation then it is always illegal combination with abstract
+	the following are various illega combination of modifiers for methods 
+	
+	
+		abstract--------- final, static, synchronized, native, strictfp, priavte.
+		
+		String s1 = new String("duarag");
+		String s2 = new String("durga");
+		String s3 =  "durga";
+		Strin s4 = "durga";
+	
