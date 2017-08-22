@@ -1,4 +1,4 @@
- # ocjp
+  # ocjp
 Oracle Ceritifed Java programmer - I
 
 Oracle Ceritifed Java Progammer  - II 
@@ -9,25 +9,25 @@ Welcome to the ocjp wiki!
 
 
 ## Java Basics
-  *Define the scope of variable
-  *Define the structure of a java class
-  *Create executable java application with a main method, run a java program form the command line, produce console output
-  *Import other java packages to make them accessible in your code
-  *Compare and contrast the features and components of java such as: platform independence, object orientation,     encapsulation
+  * Define the scope of variable
+  * Define the structure of a java class
+  * Create executable java application with a main method, run a java program form the command line, produce console output
+  * Import other java packages to make them accessible in your code
+  * Compare and contrast the features and components of java such as: platform independence, object orientation,     encapsulation
 
 
 ## Working with Java Data types
-  *Declare and initialize variable(including casting of primitive data types)
-  *Differentiate between object reference variables and primitive data variables
-  *Know how to read or write to object field
-  *Explain an Object life cycle(Creation reassignment and garbage collection)
-  *Develop code that uses wrapper classes such as Boolean, Double and Integer
+  * Declare and initialize variable(including casting of primitive data types)
+  * Differentiate between object reference variables and primitive data variables
+  * Know how to read or write to object field
+  * Explain an Object life cycle(Creation reassignment and garbage collection)
+  * Develop code that uses wrapper classes such as Boolean, Double and Integer
 
 ## Using Operators and Declaration Constructs
-  *Use Java operators; use parentheses to override operator precedence
-  *Test equality between strings and other objects using == and .equals
-  *Care if and if/else and ternary construct
-  *Use switch statement
+  * Use Java operators; use parentheses to override operator precedence
+  * Test equality between strings and other objects using == and .equals
+  * Care if and if/else and ternary construct
+  * Use switch statement
 
 ## Creating and Using Arrays
   * Declare, Instantiate, Initialize and use a one-dimensional array
