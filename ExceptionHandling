@@ -1,4 +1,4 @@
-Exception Handling
+ Exception Handling
 
   1. Introduction
   2. Runtime Stack mechanism
@@ -28,4 +28,23 @@ It is highly recommended to handle exceptoins, the main objective of exception h
 
 Exception handling dosenot mean repairing an exception, when we have to define alternative way to continue rest of the program
 normally this is nothing but Exception Handling
+
+Ex: If our program requiremet is to read data form remote location and at runtime if that file is not available our program should
+    not be terminated abnormally. We have to provide an alternative by providing a local file to continue the program execution with
+    out any interruption this process is called Exception handling.
+    
+          try {
+            //some code
+          } catch(FileNotFoundException e) {
+            use local file location if you have an exception.
+          }
+          
+
+Runtime stack Mechanism:
+
+-> For every Thread jvm will crate a Runtimestack
+-> All method calls performed by the thread will be stored in this stack
+-> Each entry in the thread is called Activiation record or stack frame
+-> After completing the method call JVM delets the corresponding entry from the stack.
+-> After completing all methodcalls, just before the terminating the thread jvm destoryes the stack.
 
