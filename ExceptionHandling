@@ -1,1 +1,31 @@
+Exception Handling
+
+  1. Introduction
+  2. Runtime Stack mechanism
+  3. Default Excepiton Handling
+  4. Exception Hierarchy
+  5. Customized Exception handling by try catch
+  6. Control flow Exception Handling by try-catch
+  7. Methods to print Exception Information
+  8. Try with multiple catch blocks
+  9. Finally
+  10. Difference between final, finally and finalize
+  11. Various possible combinations of try catch finally 
+  12. Control flow in try catch finally
+  13. Control flow in Nested Try catch finally 
+  14. Throw
+  15. Throws
+  16. Exception Handling keywords Summary
+  17. Various possible compile time error in exception handling
+  18. Customized exception
+  10. Top 10 Exceptions.
+
+
+Exception: When unwanted, unexpected event that disterbs normal flow of program is called Exception
+     ex: Sleeping Exception, FileNotFoundException
+    
+It is highly recommended to handle exceptoins, the main objective of exception handling is "Graceful termination of the program"
+
+Exception handling dosenot mean repairing an exception, when we have to define alternative way to continue rest of the program
+normally this is nothing but Exception Handling
 
