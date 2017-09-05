@@ -43,7 +43,7 @@ Ex: If our program requiremet is to read data form remote location and at runtim
 
 Runtime stack Mechanism:
 
--> For every Thread jvm will crate a Runtimestack
+E-> For every Thread jvm will crate a Runtimestack
 -> All method calls performed by the thread will be stored in this stack
 -> Each entry in the thread is called Activiation record or stack frame
 -> After completing the method call JVM delets the corresponding entry from the stack.
@@ -99,3 +99,28 @@ Exception Hierarchy:
       1. Exception
       2. Error
   
+Exception: Most of the cases Exception are caused by our program and these are recoverable
+Error: Most of the cases Errors are not caused by our program these are due to loack of system resources
+   errors are non-recoverable
+
+Checked vs Un-checked Exception:
+The Exception which are check by compiler for smooth execution of the program at runtime are called checked Exception
+
+        FileNotFoundException fe
+        
+The exception which are not checked by compiler are called Un-checked Exception 
+
+        Arithematic Exception 
+        Whether exception is checked or unchecked by compiler are called Unchecked Exceptions
+        Runtime exception and its child classes
+        Error and its child classes are unchecked exceptions and all remaining are checked exception s
+        
+Partially vs fully checked exceptions:
+
+A checked exception is said to be fully checked iff all it's child classes are alos checked
+A checked exceptino is said to be partially checked iff some it's child classes are unchecked.
+
+Customized Exception Handling by try catch:
+
+We can maintain Risky code with in try block and corresponding handling code inside catch block.
+
