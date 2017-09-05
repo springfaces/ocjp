@@ -1,4 +1,5 @@
- Exception Handling
+
+Exception Handling
 
   1. Introduction
   2. Runtime Stack mechanism
@@ -48,3 +49,53 @@ Runtime stack Mechanism:
 -> After completing the method call JVM delets the corresponding entry from the stack.
 -> After completing all methodcalls, just before the terminating the thread jvm destoryes the stack.
 
+Ex: 
+
+    class Test {
+     public static void main(String []args) {
+      doStuff();
+     }
+     public static void doStuff() {
+      doMoreStuff();
+     }
+     
+     public static void doMoreStuff() {
+     
+     }
+    }
+    
+    * Stack will be created by JVM
+    * activation record main will be added to stack
+    * activation records doStuff will be added
+    * activation record doMoreStuff will be added
+    * doMoreStuff recored will be deleted
+    * doStuff record will be deleted
+    * Main will be deleted 
+    * finally stack will be destroyed.
+    
+    Default Exception handling: 
+    -> If you have any exception, the method in which it is raised is responsible to create exception object by including 
+       the following information 
+             1. Name of the Exception
+             2. Description of Exception
+             3. Location of Exception(stack trace)
+    -> After crating exception object method handovers that exception object to the JVM
+    -> JVM checks whether the method contians any exception handling code or not.
+    -> If it doest not contain any hadling code the jvm terminattes that method obnormally and removes corresponding entry 
+       from the stack 
+       JVM identifies tha caller method and checks whether callermethod contains any handling code if not it terminates that
+       method obnormally from the stack 
+       This process will continue until main() if the main also dosent contain any handling code the main will be terminated 
+       obnormally and removes corresponding entry from stack
+       Just before terminating the program abnormally jvm handovers the responsibility to exception handling to the deraul
+       exception handler 
+       Default exception hadler jsut print exception informaiton to the console in the following format 
+           Name of the excepito: desc
+           locaiton: stack trace
+         
+Exception Hierarchy:
+
+-> Throwable class acts as a root for entire Java Exception Hierarchy. It has the following  2 child class 
+      1. Exception
+      2. Error
+  
