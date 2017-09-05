@@ -260,3 +260,15 @@ Throw: Some times we can crate exception object manualy and hand over that objec
 
       throw new ArithematicException("/by zero")
  
+In genral we can use throw keyword for customized exceptions 
+
+ case 1: If we are trying to throw new refernce, we will get null pointerexception
+ 
+ after throw statement we are not allowe dot writer any statement directly otherwise we will get compiletime error saying unreachable
+ 
+ We can ise throw keyword only for throwable type otherwise we will get compiletime error saying incompatiable types
+ 
+ 
+ Throws: 
+ 
+ 
