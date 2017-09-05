@@ -173,4 +173,34 @@ try {
    
    Hence the main purpose of finally blcok is to maintain cleanup cod ewhich shoudl be executed always.
    
+   Rewturn vs Finally:
    
+   Finally block can dominate return statement present inside try or catch block. First finally will be executed and then 
+   return statement will be considered
+   
+   The only situation where the finally block will not be executed is when ever jvm shutdown when ever we are using 
+   System.exit(0);
+   
+   
+   Difference between final finally finalize 
+   
+    final: it is a modifier applicable for classes methods and instance and class members 
+    finally: It is a block always associated iwth try catch to maintain cleanup code which should be executed always irrespective
+            of whether exception occured or in any case finally will be executed.
+    finalize: it is a method which shold be executed by garbage collector before destroying any object perform cleanup activities
+    
+    
+    Contorl flow in try catch finall y
+    
+     try {
+        statement 1;
+        statement 2;
+        statement 3;
+      } catch(Exception e) {
+          statement 4;
+      }finally {
+        statement 5;
+      }
+      
+      
+       
