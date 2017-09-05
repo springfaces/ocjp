@@ -203,4 +203,60 @@ try {
       }
       
       
-       
+Control Flow in Nested try catch finally:
+
+try  { 
+        statement 1; 
+        statement 2; 
+        statement 3;
+          try{
+            statement 4;
+            statement 5;
+            statement 6;
+          } catch(exceptino e) {
+            statement 7;
+          } finally { 
+            statement 8;
+          }
+          statement 9;
+        } catch (Exception e) { 
+            statement 10; 
+        } finally {
+            state11;
+        }
+        statement 12;
+    
+case 1: If there is no exception, then 1 2 3 4 5 6 8 9 11 12 normal termination 
+
+case 2: If an exception raised at statement2  and corresponding catch block will be executed and finally of it and  1  10 11 12
+
+case 3: If an exception raised at statement 2 and corresponding catch block not matched then   an    1 and 11 abnormal termination
+
+case 4: If an exception raised at statement 5 correspoinding inner catch has matched 1 2 3 4  7 8 9 11 12 normal termination 
+
+case 5: If an exception raised at statement 5 and corresponding inner has not matched but out catch has matched then 
+        1 2 3 4 8 10 11 12 
+        
+case 6 If an exception raised at statemtn 5 and corresponding catch block are not matched then 1 2 3 48 11 
+
+case 7 if an exception raised at state 7 and the corresponding catch block matched the 1 2 3... 8  10 11 12 
+
+case 8 If an exception raised at statemetn 7 and the corresponding matc not matched then 1 2 3 ... . 8 11 abnormal 
+
+case 9: If an exception raised at state 8 and corresponding catch matched then 1 2 3 .... 10 11 12 
+
+case 10: If an exception raised at state 8 and correspondin catch has not matched then 1 , 2 3 ..... 11 abnormal 
+
+case 11 if an exception raised at state 9 corresponding catch method then 1 2, 3.... 10 11 12 
+
+case 12: if an exception raised then stae 9 corresponding cathc  1 2 3..... 8 11
+
+case 13: if an exception raised at state 10 it is always abnormal termination 
+
+case 14 if an exception raised at state 11 or 12 it is always abornal termination
+
+
+Throw: Some times we can crate exception object manualy and hand over that object to th ejvm exlicity by using throw key word
+
+      throw new ArithematicException("/by zero")
+ 
