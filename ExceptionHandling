@@ -270,5 +270,10 @@ In genral we can use throw keyword for customized exceptions
  
  
  Throws: 
- 
+ In our program, if there is any chance of raising checked exception its mandatory we should handle
+ it Other wise we will get complietime error says"unreported exception  must be caught or declare t o
+ be thrown
+
+
+Hence the main purpose of throws keyword is to delegate 
  
